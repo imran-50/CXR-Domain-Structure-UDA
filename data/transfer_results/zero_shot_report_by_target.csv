@@ -1,0 +1,26 @@
+Trained on,Tested on,AUC
+CheXpert,CheXpert (in-domain),0.8617
+Kermany,CheXpert,0.6741
+NIH,CheXpert,0.8312
+PadChest,CheXpert,0.8299
+PRF,CheXpert,0.8168
+PadChest,PadChest (in-domain),0.9105
+CheXpert,PadChest,0.8672
+Kermany,PadChest,0.7782
+NIH,PadChest,0.8737
+PRF,PadChest,0.7627
+NIH,NIH-RSNA (in-domain),0.9911
+CheXpert,NIH-RSNA,0.9667
+Kermany,NIH-RSNA,0.9356
+PadChest,NIH-RSNA,0.9661
+PRF,NIH-RSNA,0.8876
+Kermany,Kermany (in-domain),0.9616
+CheXpert,Kermany,0.7577
+NIH,Kermany,0.9216
+PadChest,Kermany,0.7999
+PRF,Kermany,0.9574
+Sylhet,Sylhet (in-domain),0.9264
+CheXpert,PRF,0.7511
+Kermany,PRF,0.6929
+NIH,PRF,0.7581
+PadChest,PRF,0.7749
