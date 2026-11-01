@@ -39,7 +39,7 @@ If you find this work, codebase, or methodology useful in your research, please 
 
 ```bibtex
 @misc{hossain2026characterizing,
-  author       = {Hossain, Iftakhar and Hasan, Md. Imran and Hasan, Taufiq},
+  author       = {Iftakhar Hossain and Md. Imran Hasan and Taufiq Hasan},
   title        = {Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray},
   year         = {2026},
   howpublished = {\url{https://github.com/imran-50/CXR-Domain-Structure-UDA}},
