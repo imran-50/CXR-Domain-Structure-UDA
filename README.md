@@ -30,13 +30,18 @@ python reproduce_paper_tables.py
 
 ---
 
-## Citation
+## 📖 Citation
+
+If you use this work, codebase, or methodology in your research, please cite:
+
+> **Iftakhar Hossain\*, Md. Imran Hasan\*, and Taufiq Hasan**, *"Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray"*, 2026 (*Under Review*).  
+> (\* Equal contribution)
 
 ```bibtex
 @article{hossain2026characterizing,
-  author={Hossain, Iftakhar and Hasan, Md. Imran and Hasan, Taufiq},
-  title={Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray},
-  year={2026},
-  note={Under Review}
+  author    = {Hossain, Iftakhar and Hasan, Md. Imran and Hasan, Taufiq},
+  title     = {Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray},
+  journal   = {Under Review},
+  year      = {2026}
 }
 ```
