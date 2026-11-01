@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or methodology, please cite it as below."
+authors:
+  - family-names: "Hossain"
+    given-names: "Iftakhar"
+  - family-names: "Hasan"
+    given-names: "Md. Imran"
+  - family-names: "Hasan"
+    given-names: "Taufiq"
+title: "Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray"
+version: 1.0.0
+date-released: 2026-01-01
+url: "https://github.com/imran-50/CXR-Domain-Structure-UDA"
