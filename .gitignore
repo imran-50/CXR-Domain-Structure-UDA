@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.pth
+*.pt
+*.bin
+cached_features/
+dann_runs/
+.ipynb_checkpoints/
+*.DS_Store
+*.env
