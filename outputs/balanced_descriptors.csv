@@ -1,0 +1,5 @@
+Dataset,descriptor,n_normal,n_pneumonia,n_per_class,full_published,full_this_script,balanced_seed42,balanced_mean,balanced_sd,size_matched_mean
+Kermany,Silhouette,1349,3883,1349,0.153529,0.1535,0.1387,0.1366,0.0017,0.1496
+Kermany,Fisher_Ratio,1349,3883,1349,0.348605,0.3486,0.3260,0.3200,0.0049,0.3499
+PRF,Silhouette,2388,1719,1719,0.008615,0.0086,0.0113,0.0106,0.0005,0.0097
+PRF,Fisher_Ratio,2388,1719,1719,0.020556,0.0206,0.0215,0.0207,0.0006,0.0206
