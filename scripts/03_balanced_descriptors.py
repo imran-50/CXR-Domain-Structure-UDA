@@ -60,27 +60,14 @@ def assemble(recomputed):
         out[col] = np.array([recomputed[n][col] if n in recomputed else PUBLISHED[n][col] for n in DATASETS], dtype=float)
     return out
 
-def pearson(x, y):
-    x, y = np.asarray(x, float), np.asarray(y, float)
-    xc, yc = x - x.mean(), y - y.mean()
-    d = np.sqrt((xc @ xc) * (yc @ yc))
-    return float(xc @ yc / d) if d > 0 else np.nan
-
-def perm_stats(values, build, y):
-    v = np.asarray(values, float)
-    r_obs = pearson(build(v), y)
-    cr = 0
-    for q in PERMS:
-        if abs(pearson(build(v[list(q)]), y)) >= abs(r_obs) - 1e-12:
-            cr += 1
-    return {'r': r_obs, 'p_r': cr / 120.0}
-
 def main():
     print('Class Balance Control Analysis (Section IV-F)')
     balanced_csv = 'outputs/balanced_descriptors.csv'
     if os.path.exists(balanced_csv):
         df = pd.read_csv(balanced_csv)
         print(df.to_string(index=False))
+    else:
+        print('outputs/balanced_descriptors.csv not found.')
 
 if __name__ == '__main__':
     main()

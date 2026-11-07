@@ -21,7 +21,7 @@ def gbc(X, y, n_components=64, seed=42):
     Z = pca.fit_transform(X)
     Z0, Z1 = Z[y == 0], Z[y == 1]
     m0, m1 = Z0.mean(0), Z1.mean(0)
-    s0, s1 = Z0.var(0, ddof=1).mean(), Z1.var(0, ddof=1).mean()
+    s0, s1 = max(float(Z0.var(0, ddof=1).mean()), 1e-6), max(float(Z1.var(0, ddof=1).mean()), 1e-6)
     m = 0.5 * (s0 + s1)
     db = float(np.sum((m0 - m1) ** 2) / (8.0 * m) + 0.5 * d * np.log(m / np.sqrt(s0 * s1)))
     ret_var = float(np.sum(pca.explained_variance_ratio_))
@@ -31,7 +31,7 @@ def logme(X, y):
     X = StandardScaler().fit_transform(X.astype(np.float64))
     y_bin = np.where(y == 0, -1.0, 1.0)
     N, D = X.shape
-    u, s, vh = np.linalg.svd(X, full_matrices=False)
+    u, s, _ = np.linalg.svd(X, full_matrices=False)
     s2 = s ** 2
     Uy = u.T @ y_bin
     Uy2 = Uy ** 2
@@ -78,7 +78,8 @@ def nleep(X, y, seed=42):
     Z = PCA(n_components=d, random_state=seed).fit_transform(X)
     Z0, Z1 = Z[y == 0], Z[y == 1]
     m0, m1 = Z0.mean(0), Z1.mean(0)
-    s0, s1 = max(float(Z0.var(0).mean()), 1e-4), max(float(Z1.var(0).mean()), 1e-4)
+    s0 = max(float(Z0.var(0).mean()), 1e-4)
+    s1 = max(float(Z1.var(0).mean()), 1e-4)
     p0 = np.exp(-0.5 * np.sum((Z - m0) ** 2, axis=1) / s0) / (np.sqrt(s0 ** d))
     p1 = np.exp(-0.5 * np.sum((Z - m1) ** 2, axis=1) / s1) / (np.sqrt(s1 ** d))
     prob1 = np.clip(p1 / (p0 + p1 + 1e-12), 1e-6, 1.0 - 1e-6)
@@ -104,7 +105,7 @@ def compute_all_estimators(X, y, seed=42):
         'Silhouette': silhouette(X, y, seed=seed),
         'Fisher_Ratio': fisher_ratio(X, y),
         'GBC': g['GBC'],
-        'GBC_D_B': g['D_B'],
+        'GBC_D_B': g['GBC_D_B'],
         'GBC_pca_dim': g['pca_dim'],
         'GBC_retained_variance': g['retained_var'],
         'LogME': logme(X, y),

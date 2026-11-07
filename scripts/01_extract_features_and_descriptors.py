@@ -64,6 +64,7 @@ def build_embedder(weights):
 def main():
     os.makedirs('outputs', exist_ok=True)
     for tag, weights in EXTRACTORS:
+        print(f'Starting extraction with {weights} ({tag})...')
         embed_fn = build_embedder(weights)
         records = []
         for name, root in DATASETS.items():
