@@ -10,4 +10,5 @@ authors:
 title: "Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray"
 version: 1.0.0
 date-released: 2026-01-01
-url: "https://github.com/imran-50/CXR-Domain-Structure-UDA"
+url: "https://github.com/mHealthBuet/CXR-Domain-Structure-UDA"
+repository-code: "https://github.com/imran-50/CXR-Domain-Structure-UDA"

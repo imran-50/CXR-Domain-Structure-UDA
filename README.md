@@ -58,7 +58,7 @@ If you find this work, codebase, or methodology useful in your research, please 
   author       = {Iftakhar Hossain and Md. Imran Hasan and Taufiq Hasan},
   title        = {Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray},
   year         = {2026},
-  howpublished = {\url{https://github.com/imran-50/CXR-Domain-Structure-UDA}},
+  howpublished = {\url{https://github.com/mHealthBuet/CXR-Domain-Structure-UDA}},
   note         = {In Preparation}
 }
 ```
