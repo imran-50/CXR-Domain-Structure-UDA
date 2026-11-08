@@ -12,7 +12,7 @@ Official PyTorch implementation and reproduction package for the manuscript:
 Verify all exact permutation p-values, rank correlations, and Tables III to IX from the manuscript without raw images or a GPU:
 
 ```bash
-git clone https://github.com/imran-50/CXR-Domain-Structure-UDA.git
+git clone https://github.com/mHealthBuet/CXR-Domain-Structure-UDA.git
 cd CXR-Domain-Structure-UDA
 pip install -r requirements.txt
 python reproduce_paper_tables.py
