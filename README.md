@@ -37,7 +37,7 @@ python reproduce_paper_tables.py
 ## Datasets Summary (5 Clinical Cohorts)
 
 | Dataset | Population | Normal | Pneumonia | Total | Train Split | Access |
-| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| :--- | :--- | :---: | :---: | :---: | :--- |
 | Kermany | Pediatric (China) | 1,583 | 4,273 | 5,856 | 5,232 | Open Access (Cell 2018) |
 | NIH-RSNA | Adult (USA) | 3,350 | 3,350 | 6,700 | 6,000 | Open Access (RSNA Challenge) |
 | PadChest | Adult (Spain) | 3,350 | 3,350 | 6,700 | 6,000 | Open Access (BIMCV-PadChest) |
@@ -46,20 +46,21 @@ python reproduce_paper_tables.py
 
 ---
 
-## Citation
+## Pipeline Architecture
 
-If you find this work, codebase, or methodology useful in your research, please cite:
+The repository provides scripts organized from raw image feature extraction to final statistical evaluation:
 
-> **Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Abdullah H. Baqui, and Taufiq Hasan**, *"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"*, 2026 (*In Preparation*).  
-> (\* Equal contribution)  
-> Official Lab Repository: [https://github.com/mHealthBuet/CXR-Domain-Structure-UDA](https://github.com/mHealthBuet/CXR-Domain-Structure-UDA)
-
-```bibtex
-@misc{hossain2026characterizing,
-  author       = {Iftakhar Hossain and Md. Imran Hasan and Eric D. McCollum and Abdullah H. Baqui and Taufiq Hasan},
-  title        = {Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays},
-  year         = {2026},
-  howpublished = {\url{https://github.com/mHealthBuet/CXR-Domain-Structure-UDA}},
-  note         = {In Preparation}
-}
+```text
+scripts/
+|-- 01_extract_features_and_descriptors.py   # Extracts 1024-d features & calculates all 8 estimators
+|-- 02_statistics_and_tables.py              # Generates Tables III to IX (Exact Permutations)
+|-- 03_balanced_descriptors.py               # Section IV-F Class Balance Control Check
+|-- 04_train_zero_shot.py                    # In-domain source model training
+|-- 05_eval_zero_shot.py                     # Zero-shot cross-domain evaluation (25 pairs)
+`-- 06_train_eval_dann.py                    # DANN adversarial adaptation pipeline (20 pairs)
 ```
+
+---
+
+## License
+This project is licensed under the MIT License.
