@@ -50,7 +50,7 @@ python reproduce_paper_tables.py
 
 If you find this work, codebase, or methodology useful in your research, please cite:
 
-> **Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Abdullah H. Baqui, and Taufiq Hasan**, *"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"*, 2026 (*In Preparation*).  
+> **Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Abdullah H. Baqui, and Taufiq Hasan**, *"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"*, 2026.  
 > (\* Equal contribution)  
 > Official Lab Repository: [https://github.com/mHealthBuet/CXR-Domain-Structure-UDA](https://github.com/mHealthBuet/CXR-Domain-Structure-UDA)
 
@@ -60,6 +60,5 @@ If you find this work, codebase, or methodology useful in your research, please 
   title        = {Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays},
   year         = {2026},
   howpublished = {\url{https://github.com/mHealthBuet/CXR-Domain-Structure-UDA}},
-  note         = {In Preparation}
 }
 ```
