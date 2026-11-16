@@ -1,9 +1,9 @@
-# Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray
+# Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays
 
 Official PyTorch implementation and reproduction package for the manuscript:
-> **"Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray"**  
-> *Iftakhar Hossain\*, Md. Imran Hasan\*, and Taufiq Hasan (BUET mHealth Lab)*  
-> (\* Equal contribution)
+> **"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"**  
+> *Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Abdullah H. Baqui, and Taufiq Hasan^\dagger (Senior Member, IEEE)*  
+> (\* Equal contribution, ^\dagger Corresponding author)
 
 ---
 
@@ -50,13 +50,14 @@ python reproduce_paper_tables.py
 
 If you find this work, codebase, or methodology useful in your research, please cite:
 
-> **Iftakhar Hossain\*, Md. Imran Hasan\*, and Taufiq Hasan**, *"Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray"*, 2026 (*In Preparation*).  
-> (\* Equal contribution)
+> **Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Abdullah H. Baqui, and Taufiq Hasan**, *"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"*, 2026 (*In Preparation*).  
+> (\* Equal contribution)  
+> Official Lab Repository: [https://github.com/mHealthBuet/CXR-Domain-Structure-UDA](https://github.com/mHealthBuet/CXR-Domain-Structure-UDA)
 
 ```bibtex
 @misc{hossain2026characterizing,
-  author       = {Iftakhar Hossain and Md. Imran Hasan and Taufiq Hasan},
-  title        = {Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray},
+  author       = {Iftakhar Hossain and Md. Imran Hasan and Eric D. McCollum and Abdullah H. Baqui and Taufiq Hasan},
+  title        = {Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays},
   year         = {2026},
   howpublished = {\url{https://github.com/mHealthBuet/CXR-Domain-Structure-UDA}},
   note         = {In Preparation}

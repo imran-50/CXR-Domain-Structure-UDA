@@ -5,9 +5,13 @@ authors:
     given-names: "Iftakhar"
   - family-names: "Hasan"
     given-names: "Md. Imran"
+  - family-names: "McCollum"
+    given-names: "Eric D."
+  - family-names: "Baqui"
+    given-names: "Abdullah H."
   - family-names: "Hasan"
     given-names: "Taufiq"
-title: "Characterizing Domain Structure to Anticipate Unsupervised Domain Adaptation Performance for Pneumonia Detection from Chest X-ray"
+title: "Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"
 version: 1.0.0
 date-released: 2026-01-01
 url: "https://github.com/mHealthBuet/CXR-Domain-Structure-UDA"
