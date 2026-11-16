@@ -2,7 +2,7 @@
 
 Official PyTorch implementation and reproduction package for the manuscript:
 > **"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"**  
-> *Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Abdullah H. Baqui, and Taufiq Hasan^\dagger (Senior Member, IEEE)*  
+> *Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Salahuddin Ahmed, Abdullah H. Baqui, and Taufiq Hasan^\dagger (Senior Member, IEEE)*  
 > (\* Equal contribution, ^\dagger Corresponding author)
 
 ---
@@ -46,19 +46,46 @@ python reproduce_paper_tables.py
 
 ---
 
+## Repository Structure
+
+```text
+CXR-Domain-Structure-UDA/
+|-- Figure/                              # Manuscript vector figures
+|-- configs/                             # Cohort configurations and path resolution
+|-- data/transfer_results/               # Precomputed transfer AUC reports
+|-- outputs/                             # Extracted descriptor CSVs (Table III-IX)
+|-- src/                                 # Feature extractors and transferability estimators
+|-- scripts/                             # Ordered pipeline scripts (01-06)
+|-- reproduce_paper_tables.py            # Master verification runner
+|-- requirements.txt                     # Python dependencies
+|-- LICENSE                              # MIT License
+`-- README.md
+```
+
+---
+
+## Pipeline Scripts (01 to 06)
+
+- `scripts/01_extract_features_and_descriptors.py`: Extracts 1024-d DenseNet features and computes all 8 estimators.
+- `scripts/02_statistics_and_tables.py`: Computes exact permutation tests and outputs Tables III through IX.
+- `scripts/03_balanced_descriptors.py`: Executes Section IV-F class-balance control subsampling on Kermany and PRF.
+- `scripts/04_train_zero_shot.py`: Trains in-domain source classifiers.
+- `scripts/05_eval_zero_shot.py`: Evaluates direct cross-domain zero-shot performance across all 25 pairings.
+- `scripts/06_train_eval_dann.py`: Executes adversarial domain adaptation (DANN) across all 20 directed pairs.
+
+---
+
 ## Citation
 
-If you find this work, codebase, or methodology useful in your research, please cite:
-
-> **Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Abdullah H. Baqui, and Taufiq Hasan**, *"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"*, 2026.  
+> **Iftakhar Hossain\*, Md. Imran Hasan\*, Eric D. McCollum, Salahuddin Ahmed, Abdullah H. Baqui, and Taufiq Hasan**, *"Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays"*, 2026.  
 > (\* Equal contribution)  
-> Official Lab Repository: [https://github.com/mHealthBuet/CXR-Domain-Structure-UDA](https://github.com/mHealthBuet/CXR-Domain-Structure-UDA)
+> Official Repository: [https://github.com/mHealthBuet/CXR-Domain-Structure-UDA](https://github.com/mHealthBuet/CXR-Domain-Structure-UDA)
 
 ```bibtex
 @misc{hossain2026characterizing,
-  author       = {Iftakhar Hossain and Md. Imran Hasan and Eric D. McCollum and Abdullah H. Baqui and Taufiq Hasan},
+  author       = {Iftakhar Hossain and Md. Imran Hasan and Eric D. McCollum and Salahuddin Ahmed and Abdullah H. Baqui and Taufiq Hasan},
   title        = {Characterizing Datasets to Anticipate Unsupervised Domain Adaptation Performance for Radiographic Pneumonia Detection from Chest X-rays},
   year         = {2026},
-  howpublished = {\url{https://github.com/mHealthBuet/CXR-Domain-Structure-UDA}},
+  howpublished = {\url{https://github.com/mHealthBuet/CXR-Domain-Structure-UDA}}
 }
 ```
