@@ -37,7 +37,7 @@ python reproduce_paper_tables.py
 ## Datasets Summary (5 Clinical Cohorts)
 
 | Dataset | Population | Normal | Pneumonia | Total | Train Split | Access |
-| :--- | :--- | :---: | :---: | :---: | :--- |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | Kermany | Pediatric (China) | 1,583 | 4,273 | 5,856 | 5,232 | Open Access (Cell 2018) |
 | NIH-RSNA | Adult (USA) | 3,350 | 3,350 | 6,700 | 6,000 | Open Access (RSNA Challenge) |
 | PadChest | Adult (Spain) | 3,350 | 3,350 | 6,700 | 6,000 | Open Access (BIMCV-PadChest) |
@@ -46,21 +46,29 @@ python reproduce_paper_tables.py
 
 ---
 
-## Pipeline Architecture
-
-The repository provides scripts organized from raw image feature extraction to final statistical evaluation:
+## Repository Structure
 
 ```text
-scripts/
-|-- 01_extract_features_and_descriptors.py   # Extracts 1024-d features & calculates all 8 estimators
-|-- 02_statistics_and_tables.py              # Generates Tables III to IX (Exact Permutations)
-|-- 03_balanced_descriptors.py               # Section IV-F Class Balance Control Check
-|-- 04_train_zero_shot.py                    # In-domain source model training
-|-- 05_eval_zero_shot.py                     # Zero-shot cross-domain evaluation (25 pairs)
-`-- 06_train_eval_dann.py                    # DANN adversarial adaptation pipeline (20 pairs)
+CXR-Domain-Structure-UDA/
+|-- Figure/                              # Manuscript vector figures
+|-- configs/                             # Cohort configurations and path resolution
+|-- data/transfer_results/               # Precomputed transfer AUC reports
+|-- outputs/                             # Extracted descriptor CSVs (Table III-IX)
+|-- src/                                 # Feature extractors and transferability estimators
+|-- scripts/                             # Ordered pipeline scripts (01-06)
+|-- reproduce_paper_tables.py            # Master verification runner
+|-- requirements.txt                     # Python dependencies
+|-- LICENSE                              # MIT License
+`-- README.md
 ```
 
 ---
 
-## License
-This project is licensed under the MIT License.
+## Pipeline Scripts (01 to 06)
+
+- `scripts/01_extract_features_and_descriptors.py`: Extracts 1024-d DenseNet features and computes all 8 estimators.
+- `scripts/02_statistics_and_tables.py`: Computes exact permutation tests and outputs Tables III through IX.
+- `scripts/03_balanced_descriptors.py`: Executes Section IV-F class-balance control subsampling on Kermany and PRF.
+- `scripts/04_train_zero_shot.py`: Trains in-domain source classifiers.
+- `scripts/05_eval_zero_shot.py`: Evaluates direct cross-domain zero-shot performance across all 25 pairings.
+- `scripts/06_train_eval_dann.py`: Executes adversarial domain adaptation (DANN) across all 20 directed pairs.
